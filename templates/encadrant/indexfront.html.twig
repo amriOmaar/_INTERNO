@@ -1,0 +1,56 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}Les Encadrants{% endblock %}
+
+
+    {% block body %} 
+
+              
+            <!--Container-->
+            <div class="container">
+                <!--Row-->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9 col-md-12">
+                        <div class="block-tracklist gap-one-top-md">
+                            
+                            {% for encadrant in encadrants %}
+                                <ol class="playlist">
+                                     <li>
+                                    
+                                        <!--Row-->
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="block-track ml-5">
+                                                    <h5 class="mb-0  uppercase ">{{ encadrant.nom }}</h5>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 text-md-right">
+                                                <a href="#" class="btn-s uppercase btn  with-ico  toggle-lyrics">+++</a>
+                                            </div>
+                                            <div class="col-12 ">
+                                                <div class="block-lyrics w-75 text-center mt-3">
+                                                    <h3 class="mb-4 uppercase ">{{ encadrant.nom }}</h3>
+                                                    <div class="product-name">Mail : {{ encadrant.mail }}</div>
+                                                    <div class="product-name">Poste : {{ encadrant.poste }}</div>
+                                                    <div class="product-name">TEL : {{ encadrant.numTel }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+
+                                        
+
+                                    
+                                    </li>
+                                </ol>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!--End row-->
+            </div>
+            <!--End container-->
+
+
+{% endblock %}

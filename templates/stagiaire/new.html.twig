@@ -1,0 +1,22 @@
+{% extends 'baseback.html.twig' %}
+
+
+{% block body %}
+
+<div class="container-lg">
+
+
+<br>
+<h2 style="color: steelblue; text-align: center"> Ajouter Stagiaire</h1>
+<br>
+<br>
+<br>
+
+
+
+{{ include('stagiaire/_form.html.twig' , {form: form, button: 'Ajouter'}) }}
+
+</div>
+   
+
+{% endblock %}

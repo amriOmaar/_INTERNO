@@ -1,0 +1,59 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}{% endblock %}
+
+
+    {% block body %} 
+
+              
+            <!--Container-->
+            <div class="container">
+                <!--Row-->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9 col-md-12">
+                        <div class="block-tracklist gap-one-top-md">
+                            
+                            {% for stagiaire in stagiaires %}
+                                <ol class="playlist">
+                                     <li>
+                                    
+                                        <!--Row-->
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="block-track ml-5">
+                                                    <h5 class="mb-0  uppercase ">{{ stagiaire.nom }}</h5>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 text-md-right">
+                                                <a href="#" class="btn-s uppercase btn  with-ico  toggle-lyrics">+++</a>
+                                            </div>
+                                            <div class="col-12 ">
+                                                <div class="block-lyrics w-75 text-center mt-3">
+                                                    <h3 class="mb-4 uppercase ">{{ stagiaire.nom }}</h3>
+                                                    <div class="product-name">Mail : {{ stagiaire.mail }}</div>
+                                                    <div class="product-name">Poste : {{ stagiaire.faculte }}</div>
+                                                    <div class="product-name">TEL : {{ stagiaire.numTel }}</div>
+                                                    <div class="product-name">Poste : {{ stagiaire.stage }}</div>
+                                                    <div class="product-name">TEL : {{ stagiaire.dateDebut ? stagiaire.dateDebut|date('Y-m-d') : ''  }}</div>
+                                                    <div class="product-name">TEL : {{ stagiaire.dateFin ? stagiaire.dateFin|date('Y-m-d') : ''  }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+
+                                        
+
+                                    
+                                    </li>
+                                </ol>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!--End row-->
+            </div>
+            <!--End container-->
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Les Stagiaires{% endblock %}
+
+{% block body %}
+<div class="container-lg">
+    <h1 style="font-size: 2.4rem; font-weight: 100px; color: steelblue; text-align: center; margin-top: 40;">
+    Les Stagiaires
+    </h1>
+
+    <div class="text-right" style="margin-top: 26">
+    <a href="{{ path('app_stagiaire_new') }}" type="button" class="btn btn-outline-primary">Ajouter Stagiaire</a>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nom</th>
+                <th>Mail</th>
+                <th>Faculte</th>
+                <th>NumTel</th>
+                <th>Stage</th>
+                <th>DateDebut</th>
+                <th>DateFin</th>
+                <th>Image</th>
+                <th>Encadrant</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stagiaire in stagiaires %}
+            <tr>
+                <td>{{ stagiaire.nom }}</td>
+                <td>{{ stagiaire.mail }}</td>
+                <td>{{ stagiaire.faculte }}</td>
+                <td>{{ stagiaire.numTel }}</td>
+                <td>{{ stagiaire.stage }}</td>
+                <td>{{ stagiaire.dateDebut ? stagiaire.dateDebut|date('Y-m-d') : '' }}</td>
+                <td>{{ stagiaire.dateFin ? stagiaire.dateFin|date('Y-m-d') : '' }}</td>
+                <td>{{ stagiaire.image }}</td>
+                <td>{{ stagiaire.Encadrant }}</td>
+                <td>
+                    <a href="{{ path('app_stagiaire_show', {'idStagiaire': stagiaire.idStagiaire}) }}">show</a>
+                    <a href="{{ path('app_stagiaire_edit', {'idStagiaire': stagiaire.idStagiaire}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{{ form_start(form, {attr:{novalidate:'novalidate'}}) }}
+<div class="row">
+    <div class="col-md-4">{{ form_row(form.nom)}}</div>
+    <div class="col-md-4">{{ form_row(form.mail)}}</div>
+    <div class="col-md-4">{{ form_row(form.mdp)}}</div>
+</div>
+<div class="row">
+    <div class="col-md-4">{{ form_row(form.faculte)}}</div>
+    <div class="col-md-4">{{ form_row(form.numTel)}}</div>
+    <div class="col-md-4">{{ form_row(form.stage)}}</div>
+    <div class="col-md-4">{{ form_row(form.dateDebut)}}</div>
+    <div class="col-md-4">{{ form_row(form.dateFin)}}</div>
+    <div class="col-md-4">{{ form_row(form.image)}}</div>
+    
+</div>
+{{form_widget(form)}}
+<button class="btn btn-primary">{{button | default('Ajouter')}}</button>
+{{ form_end(form) }}
+</div>
+
+

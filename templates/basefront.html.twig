@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <title>Interno</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Css -->
+    {% block css %}
+    <link rel="stylesheet" href="{{ asset('front/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/base.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/flexslider.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/fonts.css') }}">
+    {% endblock %}
+    
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="loader">
+        <!-- Preloader inner -->
+        <div class="loader-inner">
+            <svg width="120" height="220" viewbox="0 0 100 100" class="loading-spinner" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle class="spinner" cx="50" cy="50" r="21" fill="#141414" stroke-width="2" />
+            </svg>
+        </div>
+        <!-- End preloader inner -->
+    </div>
+    <!-- End preloader-->
+    <!--Wrapper-->
+    <div class="wrapper">
+        <!--Hero section-->
+        <section class="hero ">
+            <!--Main slider-->
+            <div class="main-slider slider flexslider ">
+                <ul class="slides">
+                    <li>
+                        <div class="background-img overlay zoom">
+                            <img src="{{ asset('front/img/1.jpg') }}" alt="">
+                        </div>
+                        <!--Container-->
+                        <div class="container hero-content">
+                            <!--Row-->
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <!--Inner hero-->
+                                    <div class="inner-hero">
+                                        <h1 class="large text-white  mb-0">Interno</h1>
+                                        <h4 class="uppercase h4">Bienvenue sur notre platforme..</h4>
+                                        <a class="btn btn-primary mt-4" href="#"></a>
+                                    </div>
+                                </div>
+                                <!--End row-->
+                            </div>
+                            <!--End container-->
+                        </div>
+                        <!--End inner hero-->
+                    </li>
+                    
+                </ul>
+            </div>
+            <!--End main slider-->
+            <!--Header-->
+            <header class="header stopping">
+                <!--Container-->
+                <div class="container ">
+                    <!--Row-->
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <a class="scroll logo" href="#wrapper">
+                                <img class="mb-0" src="{{ asset('front/img/internoLOGO.png') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-10 text-right">
+                            <nav class="main-nav">
+                                <div class="toggle-mobile-but">
+                                    <a href="#" class="mobile-but">
+                                        <div class="lines"></div>
+                                    </a>
+                                </div>
+                                <ul class="main-menu list-inline">
+                                    <li><a class="scroll list-inline-item" href="#wrapper">Home</a></li>
+                                    <li><a class="scroll list-inline-item" href="#about">About</a></li>
+                                    <li><a class="scroll list-inline-item" href="#taches">Taches</a></li>
+                                    <li><a class="scroll list-inline-item" href="#contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--End row-->
+                </div>
+                <!--End container-->
+            </header>
+            <!--End header-->
+        </section>
+        <!--End hero section-->
+        <!--About section-->
+        <section id="about" class="about main brd-bottom">
+            <img class="pattern-center" src="{{ asset('front/img/right-pattern.png') }}" alt="">
+            <!--Container-->
+            <div class="container ">
+                <!--Row-->
+                <div class="row vertical-align">
+                    <div class="col-md-5    ">
+                        <div class="block-content text-center">
+                            <h1 class="uppercase mb-0">A Different <br>Kind of Music</h1>
+                            <p class="mt-2 lead w-95">Melbourne is the coastal capital of the southeastern Australian state of Victoria. At the city's centre is the modern Federation Square development, with plazas, bars, and restaurants by the Yarra River.</p>
+                            <img class="sing mb-0" src="{{ asset('front/img/signature.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-md-1   ">
+                        <div class="block-content">
+                            <ul class="block-images row">
+                                <li class="col-md-6 col-sm-6"><img src="{{ asset('front/img/3.jpg') }}" alt=""> </li>
+                                <li class="col-md-6 col-sm-6"><img src="{{ asset('front/img/4.jpg') }}" alt=""> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--End row-->
+            </div>
+            <!--End container-->
+            <div class="gap-one-bottom-md"></div>
+            <!--Container-->
+            <div class="container ">
+                <!--Row-->
+                <div class="row vertical-align">
+                    <div class="col-md-6   ">
+                        <div class="block-content">
+                            <ul class="block-images row">
+                                <li class="col-md-6 col-sm-6"><img src="{{ asset('front/img/5.jpg') }}" alt=""> </li>
+                                <li class="col-md-6 col-sm-6"><img src="{{ asset('front/img/6.jpg') }}" alt=""> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-1  ">
+                        <div class="block-content text-center">
+                            <h4 class="uppercase">upcoming tour </h4>
+                            <p>Fort Mason Center
+                                <br> San Fancisco, CA</p>
+                            <h4 class="uppercase h4">location </h4>
+                            <p>Sunday to Wednesday
+                                <br>July 23 to 26, 2017 </p>
+                            <a class="btn btn-primary with-ico" href="#"><i class="icon-ticket"></i>buy a ticket</a>
+                        </div>
+                    </div>
+                </div>
+                <!--End row-->
+            </div>
+            <!--End container-->
+            <!--Container-->
+            <div class="container ">
+                <!--Row-->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-9 ">
+                        </div>
+                    </div>
+                    <!--End row-->
+                </div>
+                <!--End container-->
+        </section>
+        <!--End about section-->
+        
+
+
+        <!--Taches section-->
+        <section id="taches" class="latest main brd-bottom">
+            <div class=" m-5">
+                <div class="container">
+                    {% block body %} {% endblock %}
+                </div>
+            </div>
+        </section>
+        <!--End Taches section-->
+
+
+
+        <!--Contact section-->
+        <section id="contact" class="contact main top bg-secondary">
+            <!--Container-->
+            <div class="container">
+                <!--Row-->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-9 ">
+                        <div class="block-content text-center gap-one-bottom-md">
+                            <div class="block-title ">
+                                <div class="block-bars">
+                                    <img src="{{ asset('front/img/sound-bars.png') }}" alt="">
+                                </div>
+                                <h6 class="uppercase mb-1">contact with us</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End row-->
+            </div>
+            <!--End container-->
+            <!--Container-->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <ul class="feature-list feature-list-sm text-center row gap-one-bottom-sm">
+                            <li class="col-sm-4  col-lg-4">
+                                <div class="card block-info text-center">
+                                    <div class="card-body pt-0">
+                                        <h2 class="uppercase h2">Maintenance</h2>
+                                        <p class="mb-0"><em class=" h5 mb-1 uppercase swap-color">Amri Company</em>
+                                            <br> +(216)24 405 246
+                                            <br> contact@interno.tn
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-sm-4  col-lg-4">
+                                <div class="card block-info text-center">
+                                    <div class="card-body pt-0">
+                                        <h2 class="uppercase h2">Dev</h2>
+                                        <p class="mb-0"><em class=" h5 mb-1 uppercase swap-color">Omar AMRI</em>
+                                            <br> +(216)24 405 246
+                                            <br> amri.omar@interno.tn
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-sm-4  col-lg-4">
+                                <div class="card block-info text-center">
+                                    <div class="card-body pt-0">
+                                        <h2 class="uppercase h2">info</h2>
+                                        <p class=" mb-0"><em class="h5 mb-1 uppercase swap-color">Amri Press</em>
+                                            <br> +(216)24 405 246
+                                            <br> info@interno.tn
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <ul class="block-social colored list-inline text-center mb-5">
+                            <li class="list-inline-item">
+                                <a href="#" class="hover-effect"> <i class="socicon-facebook"></i> </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="hover-effect"><i class="socicon-instagram"></i> </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="hover-effect"><i class="socicon-twitter"></i> </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="hover-effect"><i class="socicon-youtube"></i> </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="hover-effect"><i class="socicon-amazon"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--End container-->
+        </section>
+        <!--End contact section-->
+        <footer class="footer pb-5 bg-secondary text-center">
+            <!--Container-->
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-12 ">
+                        <div class="block-content pt-5 brd-top">
+                            <p class="mb-0 ">Omar Amri - <a href="#" class="swap-color underline  mr-2">Privacy Policy</a> <a href="#" class="swap-color underline  mr-2">Terms of Use</a> <a href="#" class="swap-color underline">AdChoices</a>
+                                <br> <a target="_blank" href="***"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End container-->
+        </footer>
+        <a class="block-top scroll hover-effect" href="#wrapper"><i class="icon-angle-up"></i></a>
+        </div>
+        <!-- End wrapper-->
+        <!--Javascript-->
+
+        {% block js %}
+
+        <script src="{{ asset('front/js/jquery-1.12.4.min.js') }}"></script>
+        <script src="{{ asset('front/js/jquery.flexslider-min.js') }}"></script>
+        <script src="{{ asset('front/js/smooth-scroll.js') }}"></script>
+        <script src="{{ asset('front/js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('front/js/audio.min.js') }}"></script>
+        <script src="{{ asset('front/js/twitterFetcher_min.js') }}"></script>
+        <script src="{{ asset('front/js/instafeed.min.js') }}"></script>
+        <script src="{{ asset('front/js/jquery.countdown.min.js') }}"></script>
+        <script src="{{ asset('front/js/placeholders.min.js') }}"></script>
+        <script src="{{ asset('front/js/script.js') }}"></script>
+        {% endblock %}
+        
+        <!-- Google analytics -->
+        <!-- End google analytics -->
+</body>
+
+
+</html>

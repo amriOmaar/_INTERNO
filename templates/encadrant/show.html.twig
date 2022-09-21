@@ -1,0 +1,44 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Encadrant{% endblock %}
+
+{% block body %}
+    <h1>Encadrant</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdEncadrant</th>
+                <td>{{ encadrant.idEncadrant }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ encadrant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td>{{ encadrant.mail }}</td>
+            </tr>
+            <tr>
+                <th>Mdp</th>
+                <td>{{ encadrant.mdp }}</td>
+            </tr>
+            <tr>
+                <th>Poste</th>
+                <td>{{ encadrant.poste }}</td>
+            </tr>
+            <tr>
+                <th>NumTel</th>
+                <td>{{ encadrant.numTel }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ encadrant.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_encadrant_index') }}">Retour</a>
+
+    <a href="{{ path('app_encadrant_edit', {'idEncadrant': encadrant.idEncadrant}) }}">Modidier</a>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'baseback.html.twig' %}
+
+{% block title %}Les Encadrants{% endblock %}
+
+{% block body %}
+<div class="container-lg">
+    <h1 style="font-size: 2.4rem; font-weight: 100px; color: steelblue; text-align: center; margin-top: 40;">
+    Les Encadrants
+    </h1>
+
+    <div class="text-right" style="margin-top: 26">
+    <a href="{{ path('app_encadrant_new') }}" type="button" class="btn btn-outline-primary">Ajouter Encadrant</a>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Encadrant</th>
+                <th>Mail</th>
+                <th>Poste</th>
+                <th>Numéro Tel</th>
+                <th>Image</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for encadrant in encadrants %}
+            <tr>
+                <td>{{ encadrant.nom }}</td>
+                <td>{{ encadrant.mail }}</td>
+                <td>{{ encadrant.poste }}</td>
+                <td>{{ encadrant.numTel }}</td>
+                <td>{{ encadrant.image }}</td>
+                <td>
+                    <a href="{{ path('app_encadrant_show', {'idEncadrant': encadrant.idEncadrant}) }}">Afficher</a>
+                    <a href="{{ path('app_encadrant_edit', {'idEncadrant': encadrant.idEncadrant}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}
